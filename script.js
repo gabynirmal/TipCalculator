@@ -15,7 +15,7 @@ buttons.forEach((item) => {
     const tipTotalText = document.querySelector(".tipTotal");
     const tipPercent =
       parseFloat(event.target.getAttribute("data-target")) / 100;
-    tipText.textContent = input * tipPercent;
-    tipTotalText.textContent = input * tipPercent + input;
+    tipText.textContent = (input * tipPercent).toFixed(2);
+    tipTotalText.textContent = (input * tipPercent + input).toFixed(2);
   });
 });
