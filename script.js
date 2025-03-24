@@ -13,8 +13,10 @@ buttons.forEach((item) => {
     const input = parseFloat(document.querySelector("#price").value);
     const tipText = document.querySelector(".tip");
     const tipTotalText = document.querySelector(".tipTotal");
-    const tipPercent =
-      parseFloat(event.target.getAttribute("data-target")) / 100;
+    const data = event.currentTarget.getAttribute("data-target");
+    const customVal = slider.value;
+    const tipVal = data === "custom" ? customVal : data;
+    const tipPercent = parseFloat(tipVal) / 100;
     tipText.textContent = (input * tipPercent).toFixed(2);
     tipTotalText.textContent = (input * tipPercent + input).toFixed(2);
   });

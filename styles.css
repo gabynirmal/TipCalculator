@@ -34,7 +34,7 @@ label {
   margin-left: 10px;
   font-family: "Futura", "Georgia", Calibri, "Trebuchet MS", sans-serif;
   font-size: 30px;
-  width: 150px;
+  width: 125px;
   border-radius: 10px;
 }
 
@@ -66,9 +66,4 @@ button:active {
 
 .slider {
   width: 75vw;
-}
-
-.slider::-moz-range-thumb {
-  background: #3c285c;
-  cursor: pointer;
 }
