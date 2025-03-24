@@ -12,14 +12,20 @@
       <h1>Tip Calculator</h1>
       <div>
         <label for="price">Total Price:</label>
-        <input type="text" id="price" value="200" />
+        <input type="text" id="price" value="43.95" />
         <p>Tip: <span class="tip"></span></p>
-        <p>Total + Tip: <span class="tipTotal"></span></p>
+        <p>Final Total: <span class="tipTotal"></span></p>
       </div>
       <div>
         <button type="button" data-target="10">10%</button>
         <button type="button" data-target="15">15%</button>
         <button type="button" data-target="20">20%</button>
+      </div>
+      <div class="slider-container">
+        <input type="range" min="0" max="100" class="slider" value="20" />
+        <button type="button" data-target="custom" id="custom">
+          <span class="customTip">20%</span>
+        </button>
       </div>
     </main>
   </body>

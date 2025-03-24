@@ -1,14 +1,16 @@
 body {
   background-color: #0a0a0a;
+  font-family: "Futura", "Georgia", Calibri, "Trebuchet MS", sans-serif;
 }
 
 h1 {
   color: #ad8de0;
-  font-size: 40px;
+  font-size: 50px;
 }
 
 p {
   color: #ad8de0;
+  font-size: 30px;
 }
 
 main {
@@ -16,17 +18,24 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 100vh;
 }
 
 label {
   color: #ad8de0;
+  font-size: 30px;
 }
 
-input {
+#price {
   text-align: center;
-  background-color: #ad8de0;
-  border: none;
+  background-color: #0a0a0a;
+  border: #ad8de0;
+  color: #ad8de0;
   margin-left: 10px;
+  font-family: "Futura", "Georgia", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 30px;
+  width: 150px;
+  border-radius: 10px;
 }
 
 button {
@@ -34,8 +43,32 @@ button {
   background-color: #ad8de0;
   border: none;
   font-size: 40px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Futura", "Georgia", Calibri, "Trebuchet MS", sans-serif;
   border-radius: 10px;
   padding: 20px;
   align-items: center;
+  box-shadow: 0px 10px #3c285c;
+  cursor: pointer;
+}
+
+button:active {
+  box-shadow: 0px 5px #3c285c;
+  transform: translateY(4px);
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 40px;
+}
+
+.slider {
+  width: 75vw;
+}
+
+.slider::-moz-range-thumb {
+  background: #3c285c;
+  cursor: pointer;
 }

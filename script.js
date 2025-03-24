@@ -1,16 +1,16 @@
-buttons = document.querySelectorAll("button");
-console.log(buttons);
-const input = document.querySelector("input").value;
-const tipText = document.querySelector(".tip");
-const tipTotalText = document.querySelector(".tipTotal");
-//const tipPercent = event.target.getAttribute("data-target") / 100;
-console.log(input);
-console.log(tipText);
-console.log(tipTotalText);
+const slider = document.querySelector(".slider");
+
+slider.addEventListener("input", () => {
+  const output = slider.value;
+  const customButtonText = document.querySelector(".customTip");
+  customButtonText.textContent = output + "%";
+});
+
+const buttons = document.querySelectorAll("button");
 
 buttons.forEach((item) => {
   item.addEventListener("click", (event) => {
-    const input = parseFloat(document.querySelector("input").value);
+    const input = parseFloat(document.querySelector("#price").value);
     const tipText = document.querySelector(".tip");
     const tipTotalText = document.querySelector(".tipTotal");
     const tipPercent =
