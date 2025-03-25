@@ -1,3 +1,5 @@
+//TODO: add error alert if input is not a number
+
 const slider = document.querySelector(".slider");
 
 slider.addEventListener("input", () => {
@@ -17,7 +19,7 @@ buttons.forEach((item) => {
     const customVal = slider.value;
     const tipVal = data === "custom" ? customVal : data;
     const tipPercent = parseFloat(tipVal) / 100;
-    tipText.textContent = (input * tipPercent).toFixed(2);
-    tipTotalText.textContent = (input * tipPercent + input).toFixed(2);
+    tipText.textContent = "$" + (input * tipPercent).toFixed(2);
+    tipTotalText.textContent = "$" + (input * tipPercent + input).toFixed(2);
   });
 });
