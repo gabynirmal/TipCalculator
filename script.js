@@ -13,13 +13,17 @@ const buttons = document.querySelectorAll("button");
 buttons.forEach((item) => {
   item.addEventListener("click", (event) => {
     const input = parseFloat(document.querySelector("#price").value);
-    const tipText = document.querySelector(".tip");
-    const tipTotalText = document.querySelector(".tipTotal");
-    const data = event.currentTarget.getAttribute("data-target");
-    const customVal = slider.value;
-    const tipVal = data === "custom" ? customVal : data;
-    const tipPercent = parseFloat(tipVal) / 100;
-    tipText.textContent = "$" + (input * tipPercent).toFixed(2);
-    tipTotalText.textContent = "$" + (input * tipPercent + input).toFixed(2);
+    if (isNaN(input)) {
+      alert("Input must be a number");
+    } else {
+      const tipText = document.querySelector(".tip");
+      const tipTotalText = document.querySelector(".tipTotal");
+      const data = event.currentTarget.getAttribute("data-target");
+      const customVal = slider.value;
+      const tipVal = data === "custom" ? customVal : data;
+      const tipPercent = parseFloat(tipVal) / 100;
+      tipText.textContent = "$" + (input * tipPercent).toFixed(2);
+      tipTotalText.textContent = "$" + (input * tipPercent + input).toFixed(2);
+    }
   });
 });
