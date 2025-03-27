@@ -1,1 +1,1 @@
-https://gabynirmal.github.io/TipCalculator/
+https://gabynirmal.github.io/tip-calculator/
